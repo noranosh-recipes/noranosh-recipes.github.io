@@ -3,11 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="robots" content="noindex, nofollow">
-<title>Redirecting…</title>
-</head>
-<body>
-<p id="m">Redirecting…</p>
-<script id="maria-links" type="application/json">{"crispy-cheesy-beef-chimichangas":"https://noranosh.com/crispy-cheesy-beef-chimichangas/","crockpot-french-onion-meatloaf":"https://noranosh.com/crockpot-french-onion-meatloaf/","easy-chinese-ground-beef-and-cabbage-stir-fry":"https://noranosh.com/easy-chinese-ground-beef-and-cabbage-stir-fry/","easy-ground-beef-potato-skillet":"https://noranosh.com/easy-ground-beef-potato-skillet/","easy-keto-chili":"https://noranosh.com/easy-keto-chili/","easy-taco-soup-with-ground-beef":"https://noranosh.com/easy-taco-soup-with-ground-beef/","french-onion-ground-beef-and-rice-casserole":"https://noranosh.com/french-onion-ground-beef-and-rice-casserole/","french-onion-ground-beef-rice-casserole-2":"https://noranosh.com/french-onion-ground-beef-rice-casserole-2/","garlic-butter-cheeseburger-rollups":"https://noranosh.com/garlic-butter-cheeseburger-rollups/","ground-beef-and-sweet-potato-skillet":"https://noranosh.com/ground-beef-and-sweet-potato-skillet/","ground-beef-casserole-potatoes":"https://noranosh.com/ground-beef-casserole-potatoes/","ground-beef-hobo-casserole-made-easy":"https://noranosh.com/ground-beef-hobo-casserole-made-easy/","ground-beef-sweet-potato-power-bowl":"https://noranosh.com/ground-beef-sweet-potato-power-bowl/","ground-beef-tacos":"https://noranosh.com/ground-beef-tacos/","ground-beef-tostadas":"https://noranosh.com/ground-beef-tostadas/","high-protein-chili":"https://noranosh.com/high-protein-chili/","high-protein-low-carb-philly-cheesesteak-casserole":"https://noranosh.com/high-protein-low-carb-philly-cheesesteak-casserole/","homemade-salisbury-steak":"https://noranosh.com/homemade-salisbury-steak/","homemade-smothered-ground-beef-burrito":"https://noranosh.com/homemade-smothered-ground-beef-burrito/","honey-garlic-ground-beef-and-broccoli":"https://noranosh.com/honey-garlic-ground-beef-and-broccoli/"}</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>noranosh.com</title>
+<style>html,body{margin:0;background:#fff}</style>
+<script id="maria-links" type="application/json">{"crispy-cheesy-beef-chimichangas":"https://noranosh.com/crispy-cheesy-beef-chimichangas/","crockpot-french-onion-meatloaf":"https://noranosh.com/crockpot-french-onion-meatloaf/","easy-chinese-ground-beef-and-cabbage-stir-fry":"https://noranosh.com/easy-chinese-ground-beef-and-cabbage-stir-fry/","easy-ground-beef-potato-skillet":"https://noranosh.com/easy-ground-beef-potato-skillet/","easy-keto-chili":"https://noranosh.com/easy-keto-chili/","easy-taco-soup-with-ground-beef":"https://noranosh.com/easy-taco-soup-with-ground-beef/","french-onion-ground-beef-and-rice-casserole":"https://noranosh.com/french-onion-ground-beef-and-rice-casserole/","french-onion-ground-beef-rice-casserole-2":"https://noranosh.com/french-onion-ground-beef-rice-casserole-2/","garlic-butter-cheeseburger-rollups":"https://noranosh.com/garlic-butter-cheeseburger-rollups/","ground-beef-and-sweet-potato-skillet":"https://noranosh.com/ground-beef-and-sweet-potato-skillet/","ground-beef-casserole-potatoes":"https://noranosh.com/ground-beef-casserole-potatoes/","ground-beef-hobo-casserole-made-easy":"https://noranosh.com/ground-beef-hobo-casserole-made-easy/","ground-beef-sweet-potato-power-bowl":"https://noranosh.com/ground-beef-sweet-potato-power-bowl/","ground-beef-tacos":"https://noranosh.com/ground-beef-tacos/","ground-beef-tostadas":"https://noranosh.com/ground-beef-tostadas/","high-protein-chili":"https://noranosh.com/high-protein-chili/","high-protein-low-carb-philly-cheesesteak-casserole":"https://noranosh.com/high-protein-low-carb-philly-cheesesteak-casserole/","homemade-salisbury-steak":"https://noranosh.com/homemade-salisbury-steak/","homemade-smothered-ground-beef-burrito":"https://noranosh.com/homemade-smothered-ground-beef-burrito/","honey-garlic-ground-beef-and-broccoli":"https://noranosh.com/honey-garlic-ground-beef-and-broccoli/","irresistible-best-classic-shepherds-pie":"https://noranosh.com/irresistible-best-classic-shepherds-pie/","juicy-meatballs-in-a-luxurious-mushroom-sauce":"https://noranosh.com/juicy-meatballs-in-a-luxurious-mushroom-sauce/","loaded-beef-enchiladas-with-cheese-sauce":"https://noranosh.com/loaded-beef-enchiladas-with-cheese-sauce/","loaded-cheeseburger-alfredo-pasta":"https://noranosh.com/loaded-cheeseburger-alfredo-pasta/","marry-me-meatballs":"https://noranosh.com/marry-me-meatballs/"}</script>
 <script>
 (function () {
   var links = JSON.parse(document.getElementById("maria-links").textContent);
@@ -16,7 +15,7 @@
   try { slug = decodeURIComponent(parts.shift() || ""); } catch (e) {}
   slug = slug.toLowerCase().replace(/\/+$/, "");
   var to = links[slug];
-  if (!to) { document.title = "Page not found"; document.getElementById("m").textContent = "Page not found."; return; }
+  if (!to) { document.title = "Page not found"; document.addEventListener("DOMContentLoaded", function () { document.body.textContent = "Page not found."; }); return; }
   var extra = parts.filter(Boolean).join("&");
   if (extra) {
     var h = to.indexOf("#"), hash = h < 0 ? "" : to.slice(h), u = h < 0 ? to : to.slice(0, h);
@@ -25,5 +24,7 @@
   location.replace(to);
 })();
 </script>
+</head>
+<body>
 </body>
 </html>
